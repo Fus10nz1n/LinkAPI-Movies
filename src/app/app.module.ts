@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     routing
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
