@@ -1,5 +1,6 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -8,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  public data: any;
   public genre: any
   public form: FormGroup;
+  public data: any = null;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
 
@@ -39,13 +40,20 @@ export class ProfileComponent implements OnInit {
   }
 
   save() {
-
     if (this.form.valid){
       this.data = { name: this.form.value.name, age: this.form.value.age, favorite: this.form.value.favorite, genre: this.genre };
   
       localStorage.setItem("infoUser", JSON.stringify(this.data));
     } else {
       alert("Preencha todos os campos!")
+    }
+  }
+
+  cancel(){
+    if (this.data) {
+      this.router.navigateByUrl('/');
+    } else {
+      alert('Para navegar na plataforma é necessario que tenha um perfil');
     }
   }
 
