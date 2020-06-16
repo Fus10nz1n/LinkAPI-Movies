@@ -44,6 +44,8 @@ export class ProfileComponent implements OnInit {
       this.data = { name: this.form.value.name, age: this.form.value.age, favorite: this.form.value.favorite, genre: this.genre };
   
       localStorage.setItem("infoUser", JSON.stringify(this.data));
+
+      this.router.navigateByUrl('/');
     } else {
       alert("Preencha todos os campos!")
     }
