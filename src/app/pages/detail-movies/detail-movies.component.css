@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@font-face {
+    font-family: Metropolis-SemiBold;
+    src: url(../../../assets/fonts/Metropolis-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Metropolis-Regular;
+    src: url(../../../assets/fonts/Metropolis-Regular.ttf);
+}
+
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url(../../../assets/fonts/ProximaNova-Regular.otf);
+}
+
+.nav {
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.logo small {
+    font-family: Metropolis-SemiBold;
+    font-size: 28px;
+    color: #37B987;
+    margin-left: 0.5rem;
+}
+
+.profile {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 50px;
+    font-size: 40px;
+    color: #A0AFA0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile i {
+    outline: none;
+}
+
+.return {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    color: #A0AFA0;
+    cursor: pointer;
+}
+
+.return span {
+    margin-left: 10px;
+    font-family: ProximaNova-Regular;
+    font-size: 18px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.poster {
+    width: 400px;
+    height: 510px;
+    background-color: #37B987;
+}
+
+
+
+.footer {
+    height: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+

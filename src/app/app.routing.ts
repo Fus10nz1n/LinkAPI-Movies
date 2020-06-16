@@ -1,3 +1,4 @@
+import { DetailMoviesComponent } from './pages/detail-movies/detail-movies.component';
 import { FavoriteMoviesComponent } from './pages/favorite-movies/favorite-movies.component';
 import { ListMoviesComponent } from './pages/list-movies/list-movies.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -10,7 +11,8 @@ const APP_ROUTES: Routes = [
     { path: '', component: ListMoviesComponent },
     { path: 'profile', component: ProfileComponent },
     { path: 'list', component: ListMoviesComponent },
-    { path: 'favorite', component: FavoriteMoviesComponent }
+    { path: 'details', component: DetailMoviesComponent },
+    { path: 'favorite', component: FavoriteMoviesComponent },
 
 ];
 

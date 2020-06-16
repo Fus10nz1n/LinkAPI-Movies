@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ListMoviesComponent implements OnInit {
 
   public movies: any;
+  public details: any;
 
   constructor(private moviesService: MoviesService) { }
 
@@ -19,6 +20,15 @@ export class ListMoviesComponent implements OnInit {
       this.moviesList();
     }
 
+  }
+
+  detailsMovies(movie){
+    this.details = this.movies.filter(item => {
+      if (item.title === movie){
+        return item;
+      }
+    });
+    console.log(this.details[0])
   }
 
   moviesList() {

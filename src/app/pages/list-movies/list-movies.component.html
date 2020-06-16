@@ -31,10 +31,10 @@
       <div class="movies">
         <div class="card" *ngFor="let item of movies">
           <label id="icon-favorite" *ngIf="item.favorite == false" (click)="favorite(item.title)">
-            <img src="{{ item.poster }}">
+            <img src="{{ item.poster }}" (click)="detailsMovies(item.title)">
           </label>
           <label id="icon-favorited" *ngIf="item.favorite == true" (click)="removeFavorite(item.title)">
-            <img src="{{ item.poster }}">
+            <img src="{{ item.poster }}" (click)="detailsMovies(item.title)">
           </label>
         </div>
       </div>

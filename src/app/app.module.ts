@@ -11,13 +11,15 @@ import { ListMoviesComponent } from './pages/list-movies/list-movies.component';
 import { HttpModule } from '@angular/http';
 import { MoviesService } from './service/movies.service';
 import { FavoriteMoviesComponent } from './pages/favorite-movies/favorite-movies.component';
+import { DetailMoviesComponent } from './pages/detail-movies/detail-movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     ListMoviesComponent,
-    FavoriteMoviesComponent
+    FavoriteMoviesComponent,
+    DetailMoviesComponent
   ],
   imports: [
     BrowserModule,
