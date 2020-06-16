@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@font-face {
+    font-family: Metropolis-SemiBold;
+    src: url(../../../assets/fonts/Metropolis-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Metropolis-Regular;
+    src: url(../../../assets/fonts/Metropolis-Regular.ttf);
+}
+
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url(../../../assets/fonts/ProximaNova-Regular.otf);
+}
+
+.nav {
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.logo small {
+    font-family: Metropolis-SemiBold;
+    font-size: 28px;
+    color: #37B987;
+    margin-left: 0.5rem;
+}
+
+.profile {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 50px;
+    font-size: 40px;
+    color: #A0AFA0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile i {
+    outline: none;
+}
+
+.option-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.option-search p {
+    margin: 0;
+    font-family: ProximaNova-Regular;
+    font-size: 18px;
+    color: #A0AFA0;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.search {
+    width: 90%;
+}
+
+.search input {
+    width: 100%;
+    padding-left: 40px;
+    padding-bottom: 5px;
+    font-family: ProximaNova-Regular;
+    font-size: 18px;
+    color: #A0AFA0;
+    border-color: #C8D2BE80;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    outline: none;
+}
+
+#icon-search {
+    position: relative;
+    width: 100%;
+}
+
+#icon-search:before {
+    color: #A0AFA0;
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.empty {
+    width: 300px;
+}
+
+.empty img {
+    width: 300px; 
+    margin-top: 3rem; 
+    margin-bottom: 1.5rem;
+}
+
+.empty p {
+    margin-left: 10px;
+    font-family: ProximaNova-Regular;
+    font-size: 18px;
+    color: #A0AFA0;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: none;
+}
+
+.card img {
+    box-shadow: 0px 2px 6px 0px #00000040;
+    width: 172px;
+    height: 255px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+#icon-favorite {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    text-shadow: 0px 0px 6px #0000004D;
+}
+
+#icon-favorite:before {
+    color: #FCFCFC;
+    content: "\f004";
+    font-family: 'Font Awesome 5 Free';
+    font-size: 16px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+#icon-favorited {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    text-shadow: 0px 0px 6px #0000004D;
+}
+
+#icon-favorited:before {
+    color: #FCFCFC;
+    content: "\f004";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 16px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.footer {
+    height: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+    .content div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .search {
+        width: 80%;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: #A0AFA0;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #A0AFA0;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #A0AFA0;
+}
+
+:-ms-input-placeholder {
+    color: #A0AFA0;
+}

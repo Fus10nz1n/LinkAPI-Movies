@@ -1,0 +1,51 @@
+<div class="main">
+
+  <div class="container">
+    <div class="nav">
+      <div class="logo">
+        <img src="../../../assets/images/logo-verde.svg">
+        <small><b>movies</b></small>
+      </div>
+      <div class="profile">
+        <i class="fas fa-user-circle" routerLink="/profile"></i>
+      </div>
+    </div>
+
+    <div class="option-search">
+      <div class="search">
+        <label id="icon-search">
+          <input type="text" placeholder="Search movies, actors or genre" (change)="filterMovies($event.target.value)">
+        </label>
+      </div>
+      <p routerLink="/">List all</p>
+    </div>
+
+    <div class="content">
+
+      <div class="empty" *ngIf="moviesFavorite.length == 0">
+        <img src="../../../assets/images/warning-nomovie.svg">
+        <p><b>No movies found!</b></p>
+        <p>Reset your filters to find something</p>
+      </div>
+
+      <div class="movies">
+        <ng-container *ngFor="let item of movies">
+          <div class="card" *ngIf="item.favorite == true">
+            <label id="icon-favorite" *ngIf="item.favorite == false" (click)="favorite(item.title)">
+              <img src="{{ item.poster }}">
+            </label>
+            <label id="icon-favorited" *ngIf="item.favorite == true" (click)="removeFavorite(item.title)">
+              <img src="{{ item.poster }}">
+            </label>
+          </div>
+        </ng-container>
+      </div>
+
+
+    </div>
+
+    <div class="footer"></div>
+
+  </div>
+
+</div>
