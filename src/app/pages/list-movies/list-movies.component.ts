@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { MoviesService } from '../../service/movies.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,7 +12,7 @@ export class ListMoviesComponent implements OnInit {
   public movies: any;
   public details: any;
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesService: MoviesService, private router: Router) { }
 
   ngOnInit() {
     this.movies = JSON.parse(localStorage.getItem("Movies"));
@@ -22,13 +23,19 @@ export class ListMoviesComponent implements OnInit {
 
   }
 
-  detailsMovies(movie){
+  detailsMovies(movie) {
     this.details = this.movies.filter(item => {
-      if (item.title === movie){
+      if (item.title === movie) {
         return item;
+      } else {
+        return null;
       }
     });
-    console.log(this.details[0])
+    if (this.details !== null) {
+      console.log(this.details[0])
+      localStorage.setItem("Detail Movie", JSON.stringify(this.details[0]));
+      this.router.navigateByUrl('/details')
+    }
   }
 
   moviesList() {
@@ -42,13 +49,13 @@ export class ListMoviesComponent implements OnInit {
   }
 
   filterMovies(data) {
-        if (data.length > 3) {
+    if (data.length > 3) {
       let filter = this.movies.filter(item => {
         if (item.title === data) {
           return item
         } else if (item.actors === data) {
           return item
-        } else if (item.genre === data){
+        } else if (item.genre === data) {
           return item
         } else {
           return null

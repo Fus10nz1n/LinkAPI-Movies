@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 @font-face {
+    font-family: Metropolis-Bold;
+    src: url(../../../assets/fonts/Metropolis-Bold.ttf);
+}
+
+@font-face {
     font-family: Metropolis-SemiBold;
     src: url(../../../assets/fonts/Metropolis-SemiBold.ttf);
 }
 
 @font-face {
+    font-family: Metropolis-Medium;
+    src: url(../../../assets/fonts/Metropolis-Medium.ttf);
+}
+
+@font-face {
     font-family: Metropolis-Regular;
     src: url(../../../assets/fonts/Metropolis-Regular.ttf);
+}
+
+@font-face {
+    font-family: Metropolis-Light;
+    src: url(../../../assets/fonts/Metropolis-Light.ttf);
 }
 
 @font-face {
@@ -74,10 +89,189 @@
     justify-content: space-between;
 }
 
-.poster {
-    width: 400px;
-    height: 510px;
-    background-color: #37B987;
+.title {
+    margin-bottom: 2rem;
+    font-family: Metropolis-Bold;
+    font-size: 60px;
+    color: #414641;
+}
+
+.date {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.date span {
+    margin-right: 70px;
+    padding-top: 5px;
+    font-family: Metropolis-Bold;
+    font-size: 22px;
+    color: #414641;
+}
+
+.date i {
+    margin-right: 10px;
+    font-size: 26px;
+    color: #637463;
+}
+
+.rated-r {
+    width: 35px;
+    height: 35px;
+    background-color: #EB4B3C;
+    border-radius: 5px;
+    font-family: Metropolis-Bold;
+    font-size: 25px;
+    color: #FCFCFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rated-pg13 {
+    width: 100px;
+    height: 35px;
+    background-color: #6b3ceb;
+    border-radius: 5px;
+    font-family: Metropolis-Bold;
+    font-size: 25px;
+    color: #FCFCFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rated-pg {
+    width: 50px;
+    height: 35px;
+    background-color: #eb6e3c;
+    border-radius: 5px;
+    font-family: Metropolis-Bold;
+    font-size: 25px;
+    color: #FCFCFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rated-g {
+    width: 35px;
+    height: 35px;
+    background-color: #217e30;
+    border-radius: 5px;
+    font-family: Metropolis-Bold;
+    font-size: 25px;
+    color: #FCFCFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite {
+    margin-bottom: 2.5rem;
+}
+
+.add-favorite {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-favorite span {
+    font-family: Metropolis-Bold;
+    font-size: 20px;
+    color: #637463;
+}
+
+.icon-favorite {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #EB4B3C;
+    border-radius: 5px;
+}
+
+.icon-favorite i {
+    margin-top: 2px;
+    font-size: 20px;
+    color: #EB4B3C;
+}
+
+.remove-favorite {
+    width: 200px;
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    background-color: #EB4B3C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-favorite i {
+    margin-right: 30px;
+    font-size: 25px;
+    color: #FCFCFC;
+    background-color: transparent;
+}
+
+.remove-favorite span {
+    font-family: Metropolis-Bold;
+    font-size: 20px;
+    color: #FCFCFC;
+    background-color: transparent;
+}
+
+.description {
+    padding-right: 50px;
+    margin-bottom: 2rem;
+}
+
+.description p{
+    font-family: Metropolis-Medium;
+    font-size: 30px;
+    color: #637463;
+}
+
+.list {
+    padding-right: 50px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.light {
+    font-family: Metropolis-Light;
+    font-size: 20px;
+    color: #637463;
+}
+
+.medium {
+    font-family: Metropolis-Medium;
+    font-size: 18px;
+    color: #414641;
+}
+
+.actor {
+    width: 190px;
+}
+
+.genre {
+    width: 80px;
+}
+
+.director {
+    width: 140px;
+}
+
+.poster img{
+    width: 445px;
+    height: 660px;
+    border-radius: 6px;
 }
 
 

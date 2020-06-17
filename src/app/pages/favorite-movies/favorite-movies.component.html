@@ -22,7 +22,7 @@
 
     <div class="content">
 
-      <div class="empty" *ngIf="moviesFavorite.length == 0">
+      <div class="empty" *ngIf="moviesFavorite.length == 0 || movies.length == 0">
         <img src="../../../assets/images/warning-nomovie.svg">
         <p><b>No movies found!</b></p>
         <p>Reset your filters to find something</p>

@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="return">
+    <div class="return" (click)="return()">
       <i class="fas fa-arrow-left"></i>
       <span>Return</span>
     </div>
@@ -19,11 +19,55 @@
     <div class="content">
 
       <div class="details">
+        <p class="title">{{ movie.title }}</p>
+
+        <div class="date">
+          <i class="far fa-calendar"></i>
+          <span>{{ movie.year }}</span>
+          <i class="far fa-clock"></i>
+          <span>{{ movie.runtime }}utes</span>
+          <div class="rated-r" *ngIf="movie.rated == 'R'">R</div>
+          <div class="rated-pg13" *ngIf="movie.rated == 'PG-13'">PG-13</div>
+          <div class="rated-pg" *ngIf="movie.rated == 'PG'">PG</div>
+          <div class="rated-g" *ngIf="movie.rated == 'G'">G</div>
+        </div>
+
+        <div class="favorite">
+          <div class="add-favorite" *ngIf="favorited == false" (click)="favorite(movie.title)">
+            <div class="icon-favorite">
+              <i class="fas fa-heart"></i>
+            </div>
+            <span>Add to favorites</span>
+          </div>
+          <div class="remove-favorite" *ngIf="favorited == true" (click)="removeFavorite(movie.title)">
+            <i class="fas fa-heart"></i>
+            <span>Favorited</span>
+          </div>
+        </div>
+
+        <div class="description">
+          <p>{{ movie.plot }}</p>
+        </div>
+
+        <div class="list">
+          <div class="actor">
+            <p class="light">Cast</p>
+            <p class="medium">{{ movie.actors }}</p>
+          </div>
+          <div class="genre">
+            <p class="light">Genre</p>
+            <p class="medium">{{ movie.genre }}</p>
+          </div>
+          <div class="director">
+            <p class="light">Director</p>
+            <p class="medium">{{ movie.director }}</p>
+          </div>
+        </div>
 
       </div>
 
       <div class="poster">
-        <img src="">
+        <img src="{{ movie.poster }}">
       </div>
 
     </div>
