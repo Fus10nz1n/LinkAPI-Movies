@@ -1,14 +1,15 @@
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { routing } from './app.routing';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ListMoviesComponent } from './pages/list-movies/list-movies.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthGuard } from './guards/auth.guard';
 import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
+import { routing } from './app.routing';
+
+import { AppComponent } from './app.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ListMoviesComponent } from './pages/list-movies/list-movies.component';
 import { MoviesService } from './service/movies.service';
 import { FavoriteMoviesComponent } from './pages/favorite-movies/favorite-movies.component';
 import { DetailMoviesComponent } from './pages/detail-movies/detail-movies.component';
@@ -29,7 +30,7 @@ import { DetailMoviesComponent } from './pages/detail-movies/detail-movies.compo
     HttpModule,
     routing
   ],
-  providers: [MoviesService, { provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [MoviesService, AuthGuard, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

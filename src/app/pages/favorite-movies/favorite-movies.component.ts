@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from 'src/app/service/movies.service';
 
@@ -9,9 +10,10 @@ import { MoviesService } from 'src/app/service/movies.service';
 export class FavoriteMoviesComponent implements OnInit {
 
   public movies: any;
+  public details: any;
   public moviesFavorite: any = null;
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesService: MoviesService, private router: Router) { }
 
   ngOnInit() {
     this.movies = JSON.parse(localStorage.getItem("Movies"));
@@ -21,6 +23,22 @@ export class FavoriteMoviesComponent implements OnInit {
       this.moviesList();
     }
 
+  }
+
+  detailsMovies(movie) {
+    console.log('teste')
+    this.details = this.movies.filter(item => {
+      if (item.title === movie) {
+        return item;
+      } else {
+        return null;
+      }
+    });
+    if (this.details !== null) {
+      console.log(this.details[0])
+      localStorage.setItem("Detail Movie", JSON.stringify(this.details[0]));
+      this.router.navigateByUrl('/details')
+    }
   }
 
   filterFavorite(item) {
